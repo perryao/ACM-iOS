@@ -65,9 +65,9 @@
 		8C6D745917551843005673EC = {
 			isa = PBXGroup;
 			children = (
-				8C6D746B17551843005673EC /* StoryBoardTest */,
 				8C6D746417551843005673EC /* Frameworks */,
 				8C6D746317551843005673EC /* Products */,
+				8C6D746B17551843005673EC /* StoryBoardTest */,
 			);
 			sourceTree = "<group>";
 		};
