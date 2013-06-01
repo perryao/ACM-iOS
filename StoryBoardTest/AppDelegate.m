@@ -7,11 +7,27 @@
 //
 
 #import "AppDelegate.h"
+#import "Player.h"
+#import "PlayersViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    NSMutableArray *players;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    
+    players = [NSMutableArray arrayWithCapacity:20];
+	UITabBarController *tabBarController =
+    (UITabBarController *)self.window.rootViewController;
+	UINavigationController *navigationController =
+    [[tabBarController viewControllers] objectAtIndex:0];
+	PlayersViewController *playersViewController =
+    [[navigationController viewControllers] objectAtIndex:0];
+	playersViewController.players = players;
     // Override point for customization after application launch.
     return YES;
 }
@@ -43,4 +59,56 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    
+    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet:      [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"content---%@", token);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    
+    NSString *alertMsg;
+    NSString *badge;
+    NSString *sound;
+    
+    if( [[userInfo objectForKey:@"aps"] objectForKey:@"alert"] != NULL)
+    {
+        alertMsg = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    }
+    else
+    {    alertMsg = @"{no alert message in dictionary}";
+    }
+    
+    if( [[userInfo objectForKey:@"aps"] objectForKey:@"badge"] != NULL)
+    {
+        badge = [[userInfo objectForKey:@"aps"] objectForKey:@"badge"];
+    }
+    else
+    {    badge = @"{no badge number in dictionary}";
+    }
+    
+    if( [[userInfo objectForKey:@"aps"] objectForKey:@"sound"] != NULL)
+    {
+        sound = [[userInfo objectForKey:@"aps"] objectForKey:@"sound"];
+    }
+    else
+    {    sound = @"{no sound in dictionary}";
+    }
+    UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+    if(state == UIApplicationStateActive){
+    
+    NSString* alert_msg = [NSString stringWithFormat:@"%@", alertMsg];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Push Notification"
+                                                    message:alert_msg
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    }
+    
+}
 @end

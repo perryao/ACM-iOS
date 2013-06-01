@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#define kLatestAcmPostsURL [NSURL URLWithString:@"http://www.ceas3.uc.edu/acm/android/post/"] //2
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -25,5 +30,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
