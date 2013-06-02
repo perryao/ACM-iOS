@@ -64,7 +64,12 @@
     
     NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet:      [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:
+                             [NSURL URLWithString:[NSString stringWithFormat:@"http://www.innov8uc.org/register.php?regid='%@'&name='iPhone'", token]]];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
     NSLog(@"content---%@", token);
+    
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
