@@ -66,7 +66,7 @@
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:
-                             [NSURL URLWithString:[NSString stringWithFormat:@"http://www.innov8uc.org/register.php?regid='%@'&name='iPhone'", token]]];
+                             [NSURL URLWithString:[NSString stringWithFormat:@"http://www.innov8uc.org/register.php?regid=%@&name=iPhone", token]]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
     NSLog(@"content---%@", token);
     
