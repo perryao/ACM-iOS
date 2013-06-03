@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C33B985175D00A5007271B3 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C33B984175D00A4007271B3 /* EventsViewController.m */; };
+		8C33B988175D1A48007271B3 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C33B987175D1A48007271B3 /* EventCell.m */; };
 		8C6D746617551843005673EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6D746517551843005673EC /* UIKit.framework */; };
 		8C6D746817551843005673EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6D746717551843005673EC /* Foundation.framework */; };
 		8C6D746A17551843005673EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6D746917551843005673EC /* CoreGraphics.framework */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C33B983175D00A4007271B3 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		8C33B984175D00A4007271B3 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		8C33B986175D1A47007271B3 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		8C33B987175D1A48007271B3 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
 		8C6D746217551843005673EC /* StoryBoardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryBoardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6D746517551843005673EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C6D746717551843005673EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,6 +68,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C33B989175D2096007271B3 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				8C33B98A175D20E1007271B3 /* Model */,
+				8C6D748E1757B1DC005673EC /* DetailWindowViewController.h */,
+				8C6D748F1757B1DC005673EC /* DetailWindowViewController.m */,
+				8C6D7488175519EC005673EC /* PlayersViewController.h */,
+				8C6D7489175519EC005673EC /* PlayersViewController.m */,
+			);
+			name = Posts;
+			sourceTree = "<group>";
+		};
+		8C33B98A175D20E1007271B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C6D748C17551A2B005673EC /* Player.m */,
+				8C6D748B17551A2B005673EC /* Player.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8C6D745917551843005673EC = {
 			isa = PBXGroup;
 			children = (
@@ -92,15 +119,14 @@
 		8C6D746B17551843005673EC /* StoryBoardTest */ = {
 			isa = PBXGroup;
 			children = (
+				8C33B989175D2096007271B3 /* Posts */,
 				8C6D747417551843005673EC /* AppDelegate.h */,
 				8C6D747517551843005673EC /* AppDelegate.m */,
 				8C6D747D17551843005673EC /* MainStoryboard.storyboard */,
-				8C6D748E1757B1DC005673EC /* DetailWindowViewController.h */,
-				8C6D748F1757B1DC005673EC /* DetailWindowViewController.m */,
-				8C6D7488175519EC005673EC /* PlayersViewController.h */,
-				8C6D748B17551A2B005673EC /* Player.h */,
-				8C6D748C17551A2B005673EC /* Player.m */,
-				8C6D7489175519EC005673EC /* PlayersViewController.m */,
+				8C33B983175D00A4007271B3 /* EventsViewController.h */,
+				8C33B984175D00A4007271B3 /* EventsViewController.m */,
+				8C33B986175D1A47007271B3 /* EventCell.h */,
+				8C33B987175D1A48007271B3 /* EventCell.m */,
 				8C6D748017551843005673EC /* ViewController.h */,
 				8C6D748117551843005673EC /* ViewController.m */,
 				8C6D746C17551843005673EC /* Supporting Files */,
@@ -194,6 +220,8 @@
 				8C6D748A175519EC005673EC /* PlayersViewController.m in Sources */,
 				8C6D748D17551A2B005673EC /* Player.m in Sources */,
 				8C6D74901757B1DC005673EC /* DetailWindowViewController.m in Sources */,
+				8C33B985175D00A5007271B3 /* EventsViewController.m in Sources */,
+				8C33B988175D1A48007271B3 /* EventCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
