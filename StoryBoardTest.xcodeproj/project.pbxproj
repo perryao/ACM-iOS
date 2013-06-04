@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0F5745175E296700AFFFC4 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F5744175E296700AFFFC4 /* Event.m */; };
 		8C33B985175D00A5007271B3 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C33B984175D00A4007271B3 /* EventsViewController.m */; };
 		8C33B988175D1A48007271B3 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C33B987175D1A48007271B3 /* EventCell.m */; };
 		8C6D746617551843005673EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6D746517551843005673EC /* UIKit.framework */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C0F5743175E296700AFFFC4 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		8C0F5744175E296700AFFFC4 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		8C33B983175D00A4007271B3 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		8C33B984175D00A4007271B3 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		8C33B986175D1A47007271B3 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
@@ -68,6 +71,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C0F5742175E294C00AFFFC4 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8C33B983175D00A4007271B3 /* EventsViewController.h */,
+				8C33B984175D00A4007271B3 /* EventsViewController.m */,
+				8C33B986175D1A47007271B3 /* EventCell.h */,
+				8C33B987175D1A48007271B3 /* EventCell.m */,
+				8C0F5743175E296700AFFFC4 /* Event.h */,
+				8C0F5744175E296700AFFFC4 /* Event.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		8C33B989175D2096007271B3 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,14 +135,11 @@
 		8C6D746B17551843005673EC /* StoryBoardTest */ = {
 			isa = PBXGroup;
 			children = (
+				8C0F5742175E294C00AFFFC4 /* Events */,
 				8C33B989175D2096007271B3 /* Posts */,
 				8C6D747417551843005673EC /* AppDelegate.h */,
 				8C6D747517551843005673EC /* AppDelegate.m */,
 				8C6D747D17551843005673EC /* MainStoryboard.storyboard */,
-				8C33B983175D00A4007271B3 /* EventsViewController.h */,
-				8C33B984175D00A4007271B3 /* EventsViewController.m */,
-				8C33B986175D1A47007271B3 /* EventCell.h */,
-				8C33B987175D1A48007271B3 /* EventCell.m */,
 				8C6D748017551843005673EC /* ViewController.h */,
 				8C6D748117551843005673EC /* ViewController.m */,
 				8C6D746C17551843005673EC /* Supporting Files */,
@@ -222,6 +235,7 @@
 				8C6D74901757B1DC005673EC /* DetailWindowViewController.m in Sources */,
 				8C33B985175D00A5007271B3 /* EventsViewController.m in Sources */,
 				8C33B988175D1A48007271B3 /* EventCell.m in Sources */,
+				8C0F5745175E296700AFFFC4 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
