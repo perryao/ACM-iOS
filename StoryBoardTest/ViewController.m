@@ -32,5 +32,12 @@
 }
 
 
+//Just implementing this simple method allows for dismissal of the keyboard on background tap
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [[self view] endEditing:YES];
+}
+
+
 
 @end
